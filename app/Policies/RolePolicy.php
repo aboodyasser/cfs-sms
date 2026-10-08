@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Policies;
+
+use App\Models\User;
+use Spatie\Permission\Models\Role;
+
+class RolePolicy
+{
+    public function viewAny(User $user): bool
+    {
+        return $user->can('view_roles');
+    }
+    public function view(User $user, Role $model): bool
+    {
+        return $user->can('view_roles');
+    }
+    public function create(User $user): bool
+    {
+        return $user->can('manage_roles');
+    }
+    public function update(User $user, Role $model): bool
+    {
+        return $user->can('manage_roles');
+    }
+    public function delete(User $user, Role $model): bool
+    {
+        return $user->can('manage_roles');
+    }
+}

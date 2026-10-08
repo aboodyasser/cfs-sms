@@ -1,0 +1,1 @@
+<img src="{{ asset('images/smarterp_logo_cropped.jpg') }}" alt="{{ config('app.name', 'SmartERP') }} Logo" {{ $attributes->merge(['class' => 'rounded-xl shadow-sm border border-slate-200 dark:border-slate-700']) }}>
